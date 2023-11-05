@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Assesment_demo_hilt</string>
+
+    <string name="lbl_ok">OK</string>
+    <string name="lbl_yes">Yes</string>
+    <string name="lbl_no">No</string>
+    <string name="lbl_cancel">Cancel</string>
+    <string name="lbl_done">Done</string>
+    <string name="socket_time_out">Sorry, Unable to connect server. Please try again</string>
+    <string name="internal_server_error_500">Oops!! There is some problem with request. Please try again</string>
+    <string name="logout_401">You have been logged out because you signed in on another device OR your account is inactive</string>
+    <string name="no_internet">No Internet Connection</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ahemdabad">Ahemdabad</string>
+    <string name="howdy_sajid_shaikh">Howdy sajid shaikh !!</string>
+    <string name="search">Search</string>
+
+</resources>

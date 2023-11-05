@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.explore.ui.PersonalFragment">
+
+        <FrameLayout
+            android:id="@+id/flSearchbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintEnd_toStartOf="@+id/sivEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_bar_bg"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="@dimen/_15sdp"
+                android:hint="@string/search"
+                android:padding="8dp"
+                android:paddingStart="@dimen/_20sdp"
+                tools:ignore="RtlSymmetry" />
+        </FrameLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="6dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/flSearchbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/flSearchbar"
+            app:layout_constraintTop_toTopOf="@id/flSearchbar"
+            app:srcCompat="@drawable/ic_filter" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvcard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/flSearchbar"
+            tools:listitem="@layout/card_explore_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.explore.ui.ExploreFragment">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tlexplore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#275671"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorFullWidth="true"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/CustomTextAppearanceTab"
+            app:tabTextColor="#F5FFFFFF" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpexplore"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tlexplore" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

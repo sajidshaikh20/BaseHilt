@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/bg_rounded_transparent"
+    android:insetLeft="@dimen/_10sdp"
+    android:insetRight="@dimen/_10sdp"
+    android:insetBottom="@dimen/_10sdp"></inset>

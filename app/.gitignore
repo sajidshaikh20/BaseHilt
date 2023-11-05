@@ -1,0 +1,10 @@
+/build
+.gradle/
+/.idea
+.idea/
+build/
+src/test
+src/main/gen
+src/androidTest
+local.properties/
+src/credentials

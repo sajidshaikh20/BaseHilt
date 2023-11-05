@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:elevation="@dimen/_4sdp"
+                app:cardCornerRadius="@dimen/_9sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clSubUserDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvCardName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_50sdp"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Adarsh Dwivedi"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvCardaddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/catamaran_semibold"
+                        android:text="Ahemedabad | Employee"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintStart_toStartOf="@+id/tvCardName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCardName" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvCarddistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/catamaran_semibold"
+                        android:text="Within 1.4 km"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/_8sdp"
+                        app:layout_constraintStart_toStartOf="@+id/tvCardaddress"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCardaddress" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvrequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:drawableStart="@drawable/ic_add"
+                        android:fontFamily="@font/catamaran_medium"
+                        android:text="Pending"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progress"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="wrap_content"
+                        android:progress="30"
+                        app:indicatorColor="@color/gray_dark"
+                        app:layout_constraintBottom_toTopOf="@+id/tvbussinesstype"
+                        app:layout_constraintStart_toStartOf="@id/tvCardName"
+                        app:layout_constraintTop_toBottomOf="@id/tvCarddistance"
+                        app:trackColor="@color/gray_light"
+                        app:trackCornerRadius="@dimen/_10sdp"
+                        app:trackThickness="@dimen/_6sdp" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvbussinesstype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/catamaran_semibold"
+                        android:text="Coffee | Business | Freindship"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/_8sdp"
+                        app:layout_constraintStart_toStartOf="@+id/tvCardaddress"
+                        app:layout_constraintTop_toBottomOf="@+id/progress" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvsummary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:maxWidth="@dimen/_100sdp"
+                        android:text="Hi community i am open to new connection"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/_8sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tvbussinesstype"
+                        app:layout_constraintTop_toBottomOf="@+id/tvbussinesstype" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgProfileToolbar"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginEnd="16dp"
+                android:elevation="@dimen/_2sdp"
+                android:src="@drawable/ic_profile_pic"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+

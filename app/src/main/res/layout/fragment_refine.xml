@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.refine.RefineFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvavaiblitytitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/catamaran_semibold"
+            android:text="Select your Avaiblity"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilavailiblity"
+            style="@style/CustomTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_10sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_10sdp"
+            app:boxCornerRadiusTopStart="@dimen/_10sdp"
+            app:endIconDrawable="@drawable/ic_drop_down"
+            app:endIconMode="dropdown_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvavaiblitytitle">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/actvavailiblity"
+                style="@style/CustomTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="none"
+                android:maxLines="1"
+                android:paddingHorizontal="15dp"
+                android:text="Available"
+                android:textColorHint="@color/gray_light"
+                android:textSize="11sp"
+                android:theme="@style/Theme.App.Base" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStatustitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/catamaran_semibold"
+            android:text="Add Your Status"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="@id/tilavailiblity"
+            app:layout_constraintTop_toBottomOf="@id/tilavailiblity" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilstatus"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:focusableInTouchMode="false"
+            app:boxStrokeColor="@color/gray"
+            app:boxStrokeWidth="1dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="250"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatustitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtBio"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="start"
+                app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_10sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_10sdp"
+                app:boxCornerRadiusTopStart="@dimen/_10sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvhyper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/catamaran_semibold"
+            android:text="Select Hyper local Distance"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="@id/tilavailiblity"
+            app:layout_constraintTop_toBottomOf="@id/tilstatus" />
+
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:value="5"
+            android:valueFrom="0"
+            android:valueTo="100"
+            app:haloColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvhyper"
+            app:thumbColor="@color/dark_blue"
+            app:tickColor="@color/black"
+            app:trackColorActive="@color/dark_blue"
+            app:trackColorInactive="@color/gray" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvselectpurpose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/catamaran_semibold"
+            android:text="Select Purpose"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="@id/tilavailiblity"
+            app:layout_constraintTop_toBottomOf="@id/slider" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_100sdp"
+            android:text="login"
+            app:cornerRadius="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeWidth="@dimen/_1sdp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
